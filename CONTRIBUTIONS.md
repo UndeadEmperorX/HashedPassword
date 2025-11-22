@@ -6,7 +6,7 @@
 
 |------|--------|-------|
 
-| Your Name | your-gh | Flask app, bcrypt, docs, demo scripts |
+| Dayne-Ann Baker | UndeadEmperorX | Flask app, bcrypt, docs, demo scripts |
 
 
 
