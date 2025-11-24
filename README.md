@@ -36,7 +36,7 @@
 
 # \- This demo uses bcrypt for password hashing.
 
-# \- `users\_sample.json` is safe to commit; real `users.json` with production data should be ignored.
+# \- `users_sample.json` is safe to commit; real `users.json` with production data should be ignored.
 
 # 
 
