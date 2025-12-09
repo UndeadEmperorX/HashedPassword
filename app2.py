@@ -153,8 +153,15 @@ if __name__ == "__main__":
         save_json(USERS_FILE, {})
 
     if not os.path.exists(RAINBOW_FILE):
+        samples = [
+            "password", "123456", "12345678", "qwerty", "letmein",
+            "admin", "welcome", "iloveyou", "abc123", "sunshine",
+            "dragon", "princess", "football", "monkey"
+        ]
+
         with open(RAINBOW_FILE, "w", encoding="utf-8") as f:
-            f.write("password | " + bcrypt.hashpw(b"password", bcrypt.gensalt()).decode("utf-8") + "\n")
-            f.write("123456 | " + bcrypt.hashpw(b"123456", bcrypt.gensalt()).decode("utf-8") + "\n")
+            for s in samples:
+                hashed = bcrypt.hashpw(s.encode(), bcrypt.gensalt()).decode()
+                f.write(f"{s} | {hashed}\n")
 
     app.run(debug=True)
